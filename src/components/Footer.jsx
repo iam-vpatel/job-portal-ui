@@ -10,6 +10,9 @@ const TERMS_OF_SERVICE_TEXT =
 const COOKIE_POLICY_TEXT =
   "We use cookies to keep you signed in, remember your saved jobs, and understand how the site is used. You can manage cookies in your browser settings.";
 
+const CONTACT_US_TEXT =
+  "Have a question or ran into an issue? Reach out to our team and we'll get back to you as soon as we can.";
+
 const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -178,13 +181,15 @@ const Footer = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
                 </a>
               </Tooltip>
-              <Link
-                to="/contact"
-                className="group relative hover:text-white transition-colors duration-300"
-              >
-                <span className="relative z-10">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </Link>
+              <Tooltip content={CONTACT_US_TEXT}>
+                <Link
+                  to="/contact"
+                  className="group relative hover:text-white focus:text-white outline-none transition-colors duration-300"
+                >
+                  <span className="relative z-10">Contact Us</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </Link>
+              </Tooltip>
             </div>
             <div className="text-center md:text-right">
               <div className="text-gray-400 text-sm mb-2">
